@@ -1,0 +1,20 @@
+<h2>My Friends</h2>
+
+<div
+  class="alert alert-info"
+  *ngIf="(loaded$ | async) === false">
+  <h3>Loading the data. Chill.</h3>
+</div>
+
+<section *ngIf="(loaded$ | async ) === true" class="row">
+    <div class="col">
+        <app-people-entry></app-people-entry>
+    </div>
+    <div class="col">  
+        <app-people-list></app-people-list>
+    </div>
+</section>
+
+
+
+
